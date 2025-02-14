@@ -31,27 +31,30 @@ document.addEventListener("DOMContentLoaded", function () {
         todoList.innerHTML = "";
         todos.forEach((todo, index) => {
             const divEl = document.createElement("div");
+            divEl.className = "todo-item";
             divEl.id = `todo-${index}`;
 
-            const titleEl = document.createElement("h3");
-            titleEl.textContent = todo.title;
+            const textEl = document.createElement("span");
+            textEl.className = "todo-text";
+            textEl.textContent = todo.title;
 
             const editBtn = document.createElement("button");
-            editBtn.textContent = "Edit";
+            editBtn.className = "icon-btn";
+            editBtn.innerHTML = `<img src="icons/edit.png" alt="Edit" class="icon" width="10" height="10">`;
             editBtn.addEventListener("click", function () {
                 editTodo(index);
             });
 
             const deleteBtn = document.createElement("button");
-            deleteBtn.textContent = "Delete";
+            deleteBtn.className = "icon-btn";
+            deleteBtn.innerHTML = `<img src="icons/delete.png" alt="Delete" class="icon" width="10" height="10">`;
             deleteBtn.addEventListener("click", function () {
                 deleteTodo(index);
             });
 
-            divEl.appendChild(titleEl);
+            divEl.appendChild(textEl);
             divEl.appendChild(editBtn);
             divEl.appendChild(deleteBtn);
-
             todoList.appendChild(divEl);
         });
     }
@@ -65,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const taskDiv = document.getElementById(`todo-${index}`);
         taskDiv.innerHTML = `
             <input type="text" id="edit-${index}" value="${todos[index].title}">
-            <button id="save-${index}">Save</button>
+            <button class="icon-btn" id="save-${index}">
+                <img src="icons/save.png" alt="Save" class="icon" width="10" height="10">
+            </button>
         `;
 
         document.getElementById(`save-${index}`).addEventListener("click", function () {
