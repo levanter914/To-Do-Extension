@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,12 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h2>To-Do List</h2>
-        <input type="text" id="todo-input" placeholder="Write your task...">
-        <button id="add-btn">
-                <img src="icons/add.png" alt="Add" class="icon" width="10" height="10">
+        <div style="display: flex; justify-content: center;">
+            <h1>To-Do</h1>
+        </div>
+        <div class="input-container">
+            <input type="text" id="todo-input" placeholder="Write your task...">
+            <button id="add-btn">
+                <img src="icons/add.png" alt="Add" class="icon" width="20" height="20">
             </button>
+        </div>
+                
         <div id="todo-list"></div>
+        
     </div>
     <script src="popup.js"></script>
 </body>

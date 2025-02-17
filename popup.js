@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const editBtn = document.createElement("button");
             editBtn.className = "icon-btn";
-            editBtn.innerHTML = `<img src="icons/edit.png" alt="Edit" class="icon" width="10" height="10">`;
+            editBtn.innerHTML = `<img src="icons/edit.png" alt="Edit" class="icon" width="20" height="20">`;
             editBtn.addEventListener("click", function () {
                 editTodo(index);
             });
 
             const deleteBtn = document.createElement("button");
             deleteBtn.className = "icon-btn";
-            deleteBtn.innerHTML = `<img src="icons/delete.png" alt="Delete" class="icon" width="10" height="10">`;
+            deleteBtn.innerHTML = `<img src="icons/delete.png" alt="Delete" class="icon" width="20" height="20">`;
             deleteBtn.addEventListener("click", function () {
                 deleteTodo(index);
             });
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         taskDiv.innerHTML = `
             <input type="text" id="edit-${index}" value="${todos[index].title}">
             <button class="icon-btn" id="save-${index}">
-                <img src="icons/save.png" alt="Save" class="icon" width="10" height="10">
+                <img src="icons/save.png" alt="Save" class="icon" width="20" height="20">
             </button>
         `;
 
