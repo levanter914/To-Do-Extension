@@ -5,7 +5,6 @@ A simple and modern to-do list Chrome extension inspired by a notepad design. Th
 ## Gallery 🖼️
 
 <p align="center">
-  <img src="icon.png" alt="Demo" width="300">
   <img src="demo.png" alt="Demo" width="300">
 </p>
 
