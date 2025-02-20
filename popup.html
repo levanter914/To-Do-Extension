@@ -1,26 +1,24 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div style="display: flex; justify-content: center;">
-            <h1>To-Do</h1>
-        </div>
-        <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Write your task...">
-            <button id="add-btn">
-                <img src="icons/add.png" alt="Add" class="icon" width="20" height="20">
-            </button>
-        </div>
-                
-        <div id="todo-list"></div>
-        
+  <div class="container">
+    <div class="header">
+      <h1 style="text-align: center; margin: 0;">To-Do</h1>
     </div>
-    <script src="popup.js"></script>
+    <div class="input-container">
+      <input type="text" id="todo-input" placeholder="Write your task...">
+      <button id="add-btn">
+        <img src="icons/add.png" alt="Add" class="icon-btn" width="20" height="20">
+      </button>
+    </div>
+    <div id="todo-list"></div>
+  </div>
+  <script src="popup.js"></script>
 </body>
 </html>

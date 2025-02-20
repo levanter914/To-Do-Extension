@@ -1,56 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
+/* Import custom font */
+@font-face {
+    font-family: 'ah';
+    src: url('fonts/ah.otf') format('opentype');
+  }
+  
+  body {
+    font-family: 'ah', Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    width: 250px; /* Adjust for Chrome extension popup */
-    background-color: #fdf6e3; /* Light notebook color */
-}
-
-.container {
+    padding: 10px;
+    width: 250px;
+    height: 250px; /* Fixed square popup */
+    background-color: #fff8dc; /* Modern notepad yellow */
+    box-sizing: border-box;
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.todo-header {
-    text-align: center;
-}
-
-.input-container {
+    height: 100%;
+  }
+  
+  .header {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .input-container {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
-    justify-content: center;
-}
-
-#todo-input {
-    flex: 1/2;
-    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 4px;
     border: none;
-    border-bottom: 2px solid #333; /* Adds bottom border */
-    background-color: transparent; /* Ensure it blends with the background */
-    outline: none; /* Removes blue highlight when clicked */
+    border-bottom: 2px solid #333;
+    background-color: transparent;
+    outline: none;
     font-size: 16px;
-    width: 75%; /* Makes input smaller */
-}
-
-/* Force border to appear even when autofill is active */
-#todo-input:focus, #todo-input:active {
-    border-bottom: 2px solid #000; /* Darker border on focus */
-}
-
-#add-btn {
+  }
+  
+  #todo-input:focus,
+  #todo-input:active {
+    border-bottom: 2px solid #000;
+  }
+  
+  #add-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.icon {
-    width: 20px; /* Adjusted size */
-    height: 20px;
-}
+  /* Styling for todo list container */
+  #todo-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 5px;
+  }
+  
+  /* Each todo item styling */
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 32px; /* Ensures the text is not too small */
+  }
+  
+  /* Text styling inside the todo items */
+  .todo-text {
+    font-size: 32px;
+    color: #333;
+  }
+
+  .todo-item .button-container {
+    display: flex;
+    gap: 0;
+  }
+  
+  /* Icon button styling for edit, delete, etc. */
+  .icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Icon image styling */
+  .icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
